@@ -1,0 +1,39 @@
+<canvas id='tablero'  width=500 height = 450></canvas>
+<script>
+
+	function triangulo(cd,colorBorde,colorRelleno,grosor){
+	ctx.beginPath();
+	ctx.strokeStyle = colorBorde;
+	ctx.fillStyle=colorRelleno;
+	ctx.lineWidth= grosor;
+	ctx.moveTo(cd[0],cd[1]);
+	ctx.lineTo(cd[2],cd[3]);
+	ctx.lineTo(cd[4],cd[5]);
+	ctx.closePath();
+	ctx.stroke();
+	ctx.fill();
+}
+	function recangulo(cd,colorBorde,colorRelleno,grosor){
+	ctx.beginPath();
+	ctx.strokeStyle = colorBorde;
+	ctx.fillStyle=colorRelleno;
+	ctx.lineWidth= grosor;
+	ctx.moveTo(cd[0],cd[1]);
+	ctx.lineTo(cd[2],cd[3]);
+	ctx.lineTo(cd[4],cd[5]);
+	ctx.lineTo(cd[6],cd[7]);
+	ctx.closePath();
+	ctx.stroke();
+	ctx.fill();
+}
+	
+	var c = document.getElementById('tablero')
+	var ctx = c.getContext('2d')
+	
+	var trGris = [132,300,393,165,118,14], rtNaranja[16,28,15,76,370,75,370,28];
+	var [gris, naranja] = ['rgba(195,195,195)', 'rgba(255,127,39)']
+	
+
+	triangulo(trGris, 'gray',gris);
+	rectangulo(rtNaranja,'orange',naranja);
+</script>
